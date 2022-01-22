@@ -1,0 +1,13 @@
+.skills-container {
+    width: 80vw;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: map-get($colors, my-dark-blue);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.no-img {
+    display: none;
+}
+

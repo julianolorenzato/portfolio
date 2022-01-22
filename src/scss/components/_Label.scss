@@ -1,0 +1,47 @@
+.label-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .label-span{
+        margin:-2px 0;
+        text-align: center;
+        width: 120px;
+        background-color: #fff;
+        border-radius: 150px 150px 0 0;
+        box-shadow: 0 0 3px #aaa;
+    }
+    
+    .label {
+        background-color: orange;
+        border-radius: 25px;
+        padding: 7px;
+        width: fit-content;
+        border: 1px solid black;
+        width: 150px;
+    
+        .inner {
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 3px;
+            border: 1px solid black;
+            text-align: center;
+            box-shadow: inset 0 0 10px #000000;
+    
+            .skull {
+                margin: 0px 5px;
+            }
+        }
+    }
+    
+    .striped {
+        background: repeating-linear-gradient(
+            135deg,
+            #2cea3e,
+            #c4ec04 15px,
+            aliceblue 15px,
+            aliceblue 30px
+        );
+    }
+}
+

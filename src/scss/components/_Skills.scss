@@ -1,0 +1,54 @@
+.skills {
+    width: 23%;
+    margin: 1%;
+    box-shadow: inset 0px 0px 15px #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+
+    .title {
+        background: linear-gradient(270deg,
+            #2cea3e 0%,
+            #c4ec04 100%);
+        width: 100%;
+        height: 25px;
+        padding-top: 3px;
+        padding-left: 10px;
+        border-bottom: 1px solid map-get($colors, my-dark-blue);
+    }
+
+    img {
+        height: 80px;
+        margin: 10px;
+    }
+
+    .skills-description{
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        hr {
+            border-top: 1px solid map-get($colors, my-lime);
+        }
+
+        span {
+            text-align: center;
+            padding: 10px 5px;
+            font-size: .8rem;
+        }
+        ul {
+            padding-top: 10px;
+        }
+        li {
+            list-style:circle;
+            margin-left: 15px;
+            text-align: left;
+            font-size: .7rem;
+        }
+    }
+}

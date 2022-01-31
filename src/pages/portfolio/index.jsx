@@ -14,7 +14,7 @@ export default function (props) {
                 <div className="projects-list">
                     {props.json.map((v, key) => {
                         return (
-                            <Card title={v.title} description={v.description}
+                            <Card src={v.src} title={v.title} description={v.description}
                                 small dest={`/portfolio/${v.id}`} key={key}>
                                 <Label skulls={v.difficulty} striped></Label>
                             </Card>

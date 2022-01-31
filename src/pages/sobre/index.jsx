@@ -77,7 +77,7 @@ export default function () {
                 <div className='skills-container'>
                     {hardSkills.map((value, key) => {
                         return (
-                            <Skills key={key} description={value.description}
+                            <Skills needImage key={key} description={value.description}
                                 title={value.title} circles={value.circles}></Skills>
                         )
                     })}

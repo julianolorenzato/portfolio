@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Card(props) {
 
@@ -8,7 +9,7 @@ export function Card(props) {
         <Link href={props.dest}>
             <div className={cardHeight}>
                 <div className="card_img-container">
-                    <img className="card_img" src={props.src} alt={props.alt} />
+                    <Image layout='fill' objectFit='contain' className="card_img" src={props.src} alt={props.alt} />
                 </div>
                 <div className="card_h1-container">
                     <h1 className="card_t1">{props.title}</h1>

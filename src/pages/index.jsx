@@ -50,7 +50,7 @@ export default function (props) {
                     <div className="featured-list">
                         {props.final.map((v, key) => {
                             return (
-                                <Card title={v.title} description={v.description}
+                                <Card src={v.src} title={v.title} description={v.description}
                                     medium dest={`/portfolio/${v.id}`} key={key}>
                                     <Label skulls={v.difficulty} striped></Label>
                                 </Card>

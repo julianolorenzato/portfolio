@@ -18,9 +18,11 @@
         border-bottom: 1px solid map-get($colors, my-dark-blue);
     }
 
-    img {
+    .img-container {
+        margin: 10px 0;
+        position: relative;
         height: 80px;
-        margin: 10px;
+        width: 100%;
     }
 
     .skills-description{

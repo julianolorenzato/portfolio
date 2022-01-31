@@ -1,6 +1,6 @@
-import Circles from './Circles'
+import { Circles } from './Circles'
 
-export default function (props) {
+export function Skills(props) {
 
     const noImg = props.noImg ? 'no-img' : ''
 

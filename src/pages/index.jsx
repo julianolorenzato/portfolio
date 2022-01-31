@@ -1,7 +1,7 @@
-import Layout from '../components/Layout'
 import Head from 'next/head'
-import Card from '../components/Card'
-import Label from '../components/Label'
+import { Layout } from '../components/Layout'
+import { Card } from '../components/Card'
+import { Label } from '../components/Label'
 import Link from 'next/link'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

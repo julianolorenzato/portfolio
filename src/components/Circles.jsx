@@ -1,4 +1,4 @@
-export default function(props) {
+export function Circles(props) {
 
     const filledCirclesNumber = new Array(parseInt(props.circles)).fill('').map((_, key) => {
         return <div key={key} className='circle filled-circle'></div>

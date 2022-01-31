@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function (props) {
+export function Card(props) {
 
     const cardHeight = props.small ? "card card_small" : "card card_medium"
 

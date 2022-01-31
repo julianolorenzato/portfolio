@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSkull } from '@fortawesome/free-solid-svg-icons'
 
-export default function (props) {
+export function Label(props) {
 
     const labelType = props.striped ? 'striped label' : 'label'
 

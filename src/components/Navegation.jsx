@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function (props) {
+export function Navegation(props) {
     return (
         <Link href={props.dest}>
             {props.label}

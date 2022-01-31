@@ -1,6 +1,6 @@
-import Layout from '../../components/Layout'
 import Head from 'next/head'
-import Skills from '../../components/Skills'
+import { Layout } from '../../components/Layout'
+import { Skills } from '../../components/Skills'
 
 export default function () {
 

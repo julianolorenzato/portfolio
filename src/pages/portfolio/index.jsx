@@ -1,7 +1,7 @@
-import Layout from '../../components/Layout'
 import Head from 'next/head'
-import Label from '../../components/Label'
-import Card from '../../components/Card'
+import { Layout } from '../../components/Layout'
+import { Label } from '../../components/Label'
+import { Card } from '../../components/Card'
 
 export default function (props) {
     return (

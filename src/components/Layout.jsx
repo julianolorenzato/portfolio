@@ -1,5 +1,5 @@
-import Navegation from './Navegation'
-export default function (props) {
+import { Navegation } from './Navegation'
+export function Layout(props) {
     return (
         <>
             <header className='header'>

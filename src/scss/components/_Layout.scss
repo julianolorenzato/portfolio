@@ -22,10 +22,17 @@
     transition: all .2s;
 }
 
+.page-title {
+    padding-top: 30px;
+    background-color: aliceblue;
+    font-size: 3rem;
+    text-align: center;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: aliceblue;
-    padding-top: 50px;
+    padding-top: 30px;
 }

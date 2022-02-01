@@ -9,8 +9,7 @@ export default function (props) {
             <Head>
                 <title>Portfólio</title>
             </Head>
-            <Layout>
-                <h1>Lista de Projetos</h1>
+            <Layout title='Lista de Projetos'>
                 <div className="projects-list">
                     {props.json.map((v, key) => {
                         return (

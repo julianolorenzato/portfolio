@@ -9,6 +9,7 @@ export function Layout(props) {
                     <Navegation label="Portfólio" dest="/portfolio"></Navegation>
                 </nav>
             </header>
+            <h1 className='page-title'>{props.title}</h1>
             <main className='content'>
                 {props.children}
             </main>

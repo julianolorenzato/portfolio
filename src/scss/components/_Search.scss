@@ -1,0 +1,39 @@
+.search {
+    display: flex;
+    height: 40px;
+    width: 300px;
+    align-content: stretch;
+
+    .search-input {
+        width: 75%;
+        padding: 0 10px;
+
+        border: 1px solid map-get($colors, $key: my-lime);
+        border-right: none;
+        border-radius: 0px;
+    }
+
+    .search-input:focus {
+        outline: none;
+    }
+
+    .search-button {
+        width: 25%;
+
+        background-color: map-get($colors, $key: my-dark-blue);
+        border: none;
+
+        .search-icon {
+            color: map-get($colors, $key: my-ice);
+        }
+    }
+
+    .search-button:hover {
+        background: linear-gradient(270deg, rgba(44,234,62,1) 0%, rgba(196,236,4,1) 100%);
+        cursor: pointer;
+    }
+
+    .search-button:hover .search-icon{
+        color: map-get($colors, $key: my-dark-blue);
+    }
+}

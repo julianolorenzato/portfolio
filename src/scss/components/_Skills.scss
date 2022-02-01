@@ -26,6 +26,25 @@
         width: 100%;
     }
 
+    .tag {
+        margin-top: 10px;
+        font-size: .7rem;
+        padding: 2px 5px;
+        border-radius: 20px;
+    }
+
+    .tag.frontend {
+        background-color: skyblue;
+    }
+
+    .tag.backend {
+        background-color: orange;
+    }
+
+    .tag.outro {
+        background-color: crimson;
+    }
+
     .skills-description{
         margin-top: 15px;
         width: 100%;
@@ -34,6 +53,7 @@
         padding: 10px;
 
         hr {
+            margin-top: -15px;
             border-top: 1px solid map-get($colors, my-lime);
         }
 

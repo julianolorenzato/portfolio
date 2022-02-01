@@ -1,5 +1,12 @@
 .btn {
     background-color: #05092a;
     color: aliceblue;
-    border-radius: 15px;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: map-get($colors, $key: my-pink);
+    cursor: pointer;
 }

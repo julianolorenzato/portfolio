@@ -1,14 +1,17 @@
 .card_small {
     height: 200px;
+    flex: 1 0 0;
+    min-width: 350px;
 }
 
 .card_medium {
     height: 320px;
+    min-width: 250px;
+    flex: 1 0 0;
 }
 
 .card {
     display: inline-block;
-    width: 20%;
     background-color: map-get($colors, my-ice);
     transform: scale(.9);
     border-radius: 10px;

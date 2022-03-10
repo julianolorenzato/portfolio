@@ -1,82 +1,23 @@
 import Head from 'next/head'
+import { BtnContainer, SkillsContainer } from './styles'
+
 import { Layout } from '../../components/Layout'
-import { Skills } from '../../components/Skills'
+import { Skill } from '../../components/Skill'
 import { Button } from '../../components/Button'
+
 import { useState } from 'react'
+import fetchData from '../../fetchs/fetchData'
 
-export default function () {
-
-    const hardSkills = [{
-        title: 'HTML5',
-        description: ['Meta tags', 'Links', 'Listas', 'Formulários', 'Tabelas', 'Imagens', 'Atributos', '...'],
-        circles: '10',
-        tag: ['frontend']
-    }, {
-        title: 'CSS3',
-        description: ['Seletores', 'Variáveis', 'Especificidade', 'Herança', 'Media Query', 'Flexbox', 'Grid CSS', '...'],
-        circles: '8',
-        tag: ['frontend']
-    }, {
-        title: 'JavaScript',
-        description: ['Fundamentos da Linguagem', 'Estruturas de dados', 'Loops', 'Condicionais', 'Escopo', 'ESNext', 'Ajax', '...'],
-        circles: '8',
-        tag: ['frontend', 'backend']
-    }, {
-        title: 'Node',
-        description: ['Módulos', 'npm', 'require()', 'module.exports', '...'],
-        circles: '7',
-        tag: ['backend']
-    }, {
-        title: 'React',
-        description: ['Componente funcional', 'Componente de classe', 'Parâmetros de componente', 'React Hooks', 'JSX', '...'],
-        circles: '8',
-        tag: ['frontend']
-    }, {
-        title: 'Next',
-        description: ['Estrutura de pastas', 'Rotas', 'Rotas Dinâmicas', 'Links', 'Next API', '...'],
-        circles: '6',
-        tag: ['frontend', 'backend']
-    }, {
-        title: 'Git',
-        description: ['Comandos Git CLI'],
-        circles: '6',
-        tag: ['outro']
-    }, {
-        title: 'jQuery',
-        description: ['Selecionar elementos', 'Modificar elementos', 'Eventos', 'Animações'],
-        circles: '4',
-        tag: ['frontend']
-    }, {
-        title: 'Bootstrap',
-        description: ['Componentes', 'Classes utilitárias', 'Bootstrap Grid'],
-        circles: '6',
-        tag: ['frontend']
-    }, {
-        title: 'SASS',
-        description: ['Mixins', 'Variáveis', 'Identação', 'Funções'],
-        circles: '5',
-        tag: ['frontend']
-    }, {
-        title: 'Gulp',
-        description: ['Processamento de arquivos (minificação)'],
-        circles: '4',
-        tag: ['outro']
-    }, {
-        title: 'Webpack',
-        description: ['Processamento de arquivos (minificação)'],
-        circles: '4',
-        tag: ['outro']
-    }]
-
-    const [skills, setSkills] = useState(hardSkills)
+export default function About(props) {
+    const [skills, setSkills] = useState(props.skills)
 
     const handleClick = (e) => {
+        console.log(e.target.textContent)
         setSkills(
             e.target.textContent !== 'Todos' 
-            ? hardSkills.filter(skill => skill.tag.includes(e.target.textContent.toLowerCase())) 
+            ? hardSkills.filter(skill => skill.categories.includes(e.target.textContent.toLowerCase())) 
             : hardSkills
         )
-        console.log(e.target.textContent)
     }
 
     return (
@@ -85,21 +26,29 @@ export default function () {
                 <title>Sobre</title>
             </Head>
             <Layout title='Habilidades'>
-                <div className="btn-container">
+                <BtnContainer>
                     <Button onClick={handleClick}>Todos</Button>
                     <Button onClick={handleClick}>Frontend</Button>
                     <Button onClick={handleClick}>Backend</Button>
                     <Button onClick={handleClick}>Outro</Button>
-                </div>
-                <div className='skills-container'>
-                    {skills.map((value, key) => {
+                </BtnContainer>
+                <SkillsContainer>
+                    {skills.map((v, k) => {
                         return (
-                            <Skills key={key} description={value.description} title={value.title}
-                                circles={value.circles} tag={value.tag}></Skills>
+                            <Skill key={k} knowledge={v.knowledge} title={v.title}
+                                circles={v.level} tag={v.categories}></Skill>
                         )
                     })}
-                </div>
+                </SkillsContainer>
             </Layout>
         </>
     )
+}
+
+export async function getStaticProps() {
+    return {
+        props: {
+            skills: await fetchData('skills')
+        }
+    }
 }

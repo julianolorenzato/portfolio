@@ -1,6 +1,6 @@
 import { Container, Navigation } from './styles'
 import { useState } from 'react'
-import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 export const SlideShow = ({ children }) => {
 	const [current, setCurrent] = useState(0)
@@ -29,12 +29,12 @@ export const SlideShow = ({ children }) => {
 
 	return (
 		<Container>
-			<FaChevronCircleLeft size="3rem" onClick={toLeft} />
-			<FaChevronCircleRight size="3rem" onClick={toRight} />
+			<FaAngleLeft size="3rem" onClick={toLeft} />
+			<FaAngleRight size="3rem" onClick={toRight} />
 			{images[current]}
 			<Navigation>
 				{children.map((_, i) => {
-					const style = i === current ? { backgroundColor: '#555' } : {}
+					const style = i === current ? { opacity: '100%' } : {}
 
 					return (
 						<div

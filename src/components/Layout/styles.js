@@ -10,6 +10,7 @@ export const Header = styled.header`
 		display: flex;
 		justify-content: space-around;
 		width: 35vw;
+		flex: 0 0 400px;
 
 		a {
 			color: ${props => props.theme.colors.contrast};
@@ -22,6 +23,10 @@ export const Header = styled.header`
 				transition: all 0.2s;
 			}
 		}
+	}
+
+	div {
+		flex: 1;
 	}
 `
 

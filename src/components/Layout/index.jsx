@@ -6,12 +6,15 @@ export function Layout(props) {
 	return (
 		<>
 			<Header>
+				<div></div>
 				<nav>
 					<Link href="/">Inicio</Link>
 					<Link href="/sobre">Sobre</Link>
 					<Link href="/portfolio">Portfólio</Link>
 				</nav>
-				<ToggleButton />
+				<div>
+					<ToggleButton />
+				</div>
 			</Header>
 			<PageTitle>{props.title}</PageTitle>
 			<Content>{props.children}</Content>

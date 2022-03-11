@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const TitleSection = styled.div`
 	transition: all 0.3s ease;
 	height: 20%;
-	background: ${props => props.theme.colors.gradient};
+	background: ${(props) => props.theme.colors.gradient};
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,7 +23,7 @@ export const ImageSection = styled.div`
 export const DescriptionSection = styled.div`
 	height: 80%;
 	transition: all 0.3s ease;
-	background-color: ${props => props.theme.colors.contrast};
+	background-color: ${(props) => props.theme.colors.contrast};
 	padding: 10%;
 	display: flex;
 	flex-direction: column;
@@ -32,8 +32,8 @@ export const DescriptionSection = styled.div`
 `
 
 export const Container = styled.div`
-    ${props => props.format}
-    flex: 1 0 0;
+	${(props) => props.format}
+	flex: 1 0 0;
 	transform: scale(0.9);
 	border-radius: 10px;
 	overflow: hidden;

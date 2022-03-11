@@ -55,12 +55,13 @@ export const SpeechBubble2 = styled.div`
 	right: 10vw;
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0px 0px 10px ${props => props.theme.colors.shadow};
+	box-shadow: 0px 0px 15px ${props => props.theme.colors.shadow}90;
 	height: 160px;
 	margin: 20px;
 	width: 310px;
 	padding: 10px;
 	z-index: 3;
+	color: ${props => props.theme.colors.primary};
 
 	ul {
 		height: 100%;
@@ -85,7 +86,7 @@ export const SpeechBubble2 = styled.div`
 
 	&::after {
 		background-color: #fff;
-		box-shadow: -3px 3px 4px 0 ${props => props.theme.colors.shadow};
+		box-shadow: -3px 2px 5px 0 ${props => props.theme.colors.shadow}50;
 		content: '';
 		display: block;
 		height: 20px;
@@ -102,7 +103,7 @@ export const SpeechBubble2 = styled.div`
 `
 
 export const Featured = styled.div`
-	background-color: #05092A;
+	background-color: ${props => props.theme.colors.primary};
 	height: fit-content;
 	width: 100%;
 	display: flex;
@@ -119,7 +120,7 @@ export const Featured = styled.div`
 		background: ${(props) => props.theme.colors.gradient};
 		padding: 20px;
 		border-radius: 150px;
-		border: 20px solid #05092A;
+		border: 20px solid ${props => props.theme.colors.primary};
 	}
 
 	> div {

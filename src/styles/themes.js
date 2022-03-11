@@ -6,8 +6,8 @@ const themes = [
 			primary: '#05092A',
 			secondary: '#EC2461',
 			contrast: '#20232A',
-			text: '#222',
-			shadow: '#999',
+			text: '#f0f8ff',
+			shadow: '#999999',
 			gradient: 'linear-gradient(270deg, #2cea3e 0%, #c4ec04 100%)'
 		}
 	},
@@ -15,10 +15,10 @@ const themes = [
 		title: 'dark',
 		colors: {
 			background: '#20232A',
-			primary: '#474A48',
-			secondary: '#007ACC',
+			primary: '#111111',
+			secondary: '#EC2461',
 			contrast: '#f0f8ff',
-			text: '#222',
+			text: '#222222',
 			shadow: 'transparent',
 			gradient: 'linear-gradient(270deg, #ff00cc 0%, #333399 100%)'
 		}

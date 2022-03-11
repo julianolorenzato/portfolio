@@ -8,15 +8,15 @@ import { Button } from '../../components/Button'
 import { useState } from 'react'
 import fetchData from '../../fetchs/fetchData'
 
-export default function About(props) {
-    const [skills, setSkills] = useState(props.skills)
+export default function About({ initialSkills }) {
+    const [skills, setSkills] = useState(initialSkills)
 
     const handleClick = (e) => {
         console.log(e.target.textContent)
         setSkills(
             e.target.textContent !== 'Todos' 
-            ? hardSkills.filter(skill => skill.categories.includes(e.target.textContent.toLowerCase())) 
-            : hardSkills
+            ? initialSkills.filter(skill => skill.categories.includes(e.target.textContent.toLowerCase())) 
+            : initialSkills
         )
     }
 
@@ -30,7 +30,10 @@ export default function About(props) {
                     <Button onClick={handleClick}>Todos</Button>
                     <Button onClick={handleClick}>Frontend</Button>
                     <Button onClick={handleClick}>Backend</Button>
-                    <Button onClick={handleClick}>Outro</Button>
+                    <Button onClick={handleClick}>Bundling</Button>
+                    <Button onClick={handleClick}>Version-Control</Button>
+                    <Button onClick={handleClick}>Database</Button>
+                    <Button onClick={handleClick}>Cloud-Service</Button>
                 </BtnContainer>
                 <SkillsContainer>
                     {skills.map((v, k) => {
@@ -48,7 +51,7 @@ export default function About(props) {
 export async function getStaticProps() {
     return {
         props: {
-            skills: await fetchData('skills')
+            initialSkills: await fetchData('skills')
         }
     }
 }

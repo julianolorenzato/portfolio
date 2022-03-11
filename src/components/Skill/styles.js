@@ -4,7 +4,7 @@ export const Container = styled.div`
 	flex: 1 0 0;
 	min-width: 200px;
 	margin: 1%;
-	box-shadow: 0px 0px 15px #999;
+	box-shadow: 0px 0px 15px ${props => props.theme.colors.shadow};
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -19,7 +19,7 @@ export const Title = styled.h1`
 	height: 25px;
 	padding-top: 3px;
 	padding-left: 10px;
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid ${props => props.theme.colors.primary};
 	color: #222;
 `
 

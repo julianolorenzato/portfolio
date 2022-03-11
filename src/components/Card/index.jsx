@@ -14,7 +14,6 @@ export function Card(props) {
 				height: '320px',
 				minWidth: '250px'
 		  }
-
 	return (
 		<Link href={props.dest}>
 			<Container format={format}>

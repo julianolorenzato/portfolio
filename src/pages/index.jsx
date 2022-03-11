@@ -26,6 +26,7 @@ export default function Home(props) {
 					<h2>FullStack Developer</h2>
 				</SpeechBubble1>
 				<SpeechBubble2>
+					<div></div>
 					<ul>
 						<li>
 							<FaLinkedin size='1.5rem' />

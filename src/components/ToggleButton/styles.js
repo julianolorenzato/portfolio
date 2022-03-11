@@ -1,41 +1,9 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-const showSun = keyframes`
-    0% {
-        transform: translate(-50px, 20px);
-    } 100% {
-        transform: translate(0, 0);
-    }
-`
-
-const showMoon = keyframes`
-    0% {
-        transform: translate(50px, 20px);
-    } 100% {
-        transform: translate(0, 0);
-    }
-`
-
-const hideSun = keyframes`
-    0% {
-        transform: translate(0, 0);
-    } 100% {
-        transform: translate(-50px, 20px);
-    }
-`
-
-const hideMoon = keyframes`
-    0% {
-        transform: translate(0, 0);
-    } 100% {
-        transform: translate(50px, 20px);
-    }
-`
-
-export const Container = styled.div`
-	height: 60px;
-	width: 60px;
-	border: 3px solid ${(props) => props.theme.colors.contrast};
+export const Container = styled.label`
+	height: 30px;
+	width: 30px;
+	border: 2px solid ${(props) => props.theme.colors.contrast};
 	border-radius: 50%;
 	display: flex;
 	justify-content: space-around;
@@ -47,13 +15,28 @@ export const Container = styled.div`
 	svg {
 		color: ${(props) => props.theme.colors.contrast};
 		position: absolute;
+		transition: transform 1s;
 
-		&:nth-child(1) {
-			animation: ${(props) => (props.mode === 'light' ? showSun : hideSun)} 1s forwards;
+		&:nth-of-type(1) {
+			transform: translate(0, 0);
 		}
-		&:nth-child(2) {
-			animation: ${(props) => (props.mode === 'light' ? hideMoon : showMoon)} 1s forwards;
+		&:nth-of-type(2) {
+			transform: translate(50px, 20px);
 		}
+	}
+
+	input:checked ~ svg {
+		&:nth-of-type(1) {
+			transform: translate(-50px, 20px);
+		}
+
+		&:nth-of-type(2) {
+			transform: translate(0, 0);
+		}
+	}
+
+	input {
+		display: none;
 	}
 
 	&:hover svg {

@@ -5,12 +5,13 @@ import { FaSun, FaMoon } from 'react-icons/fa'
 import { useToggleTheme } from '../../contexts/ThemeContext'
 
 export const ToggleButton = () => {
-    const [theme, toggleTheme] = useToggleTheme()
+	const [theme, toggleTheme] = useToggleTheme()
 
 	return (
-		<Container onClick={toggleTheme} mode={theme.title}>
-			<FaSun size="2rem" />
-			<FaMoon size="2rem" />
+		<Container htmlFor="toggle" mode={theme.title}>
+			<input type="checkbox" id="toggle" onChange={toggleTheme} checked={theme.title === 'light'} />
+			<FaSun size="1.2rem" />
+			<FaMoon size="1.2rem" />
 		</Container>
 	)
 }

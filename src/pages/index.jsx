@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { SpeechBubble1, SpeechBubble2, Featured } from './styles'
+import { SpeechBubble1, SpeechBubble2, Featured, HomeImage } from './styles'
 
 import { Layout } from '../components/Layout'
 import { Card } from '../components/Card'
@@ -46,7 +46,7 @@ export default function Home(props) {
 						</li>
 					</ul>
 				</SpeechBubble2>
-				<img src="images/juliano.png" alt="juliano-image" />
+				<HomeImage src="images/juliano.png" alt="juliano-image" />
 				<Featured>
 					<h3>Destaques</h3>
 					<div>

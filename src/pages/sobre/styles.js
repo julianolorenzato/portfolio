@@ -16,10 +16,9 @@ export const BtnContainer = styled.div`
 `
 
 export const SkillsContainer = styled.div`
-	width: 80vw;
+	width: 80%;
 	margin-bottom: 30px;
 	padding: 20px;
-	background-color: transparent;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	grid-gap: 15px;

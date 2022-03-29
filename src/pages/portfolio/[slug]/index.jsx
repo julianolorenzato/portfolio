@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
-import { Container } from './styles'
+import { Container, Top, Bottom } from './styles'
 
 import { SlideShow } from '../../../components/SlideShow'
 import { Layout } from '../../../components/Layout'
@@ -42,17 +41,21 @@ export default function Project(props) {
 			</Head>
 			<Layout>
 				<Container>
-					<span>Id: {props.data.id}</span>
-					<span>slug: {props.data.slug}</span>
-					<span>title: {props.data.title}</span>
-					<span>description: {props.data.description}</span>
-					<span>difficulty: {props.data.level}</span>
-
-					<SlideShow>
-						{props.data.urls.map((v, k) => (
-							<img key={k} src={v} alt={k}></img>
-						))}
-					</SlideShow>
+					<Top>
+						<h2>{props.data.title}</h2>
+						<p>{props.data.description}</p>
+						Tecnologias:
+						<ul>
+							{props.data.skills.map((v, i) => <li key={i}>{v}</li>)}
+						</ul>
+					</Top>
+					<Bottom>
+						<SlideShow>
+							{props.data.urls.map((v, k) => (
+								<img key={k} src={v} alt={k}></img>
+							))}
+						</SlideShow>
+					</Bottom>
 				</Container>
 			</Layout>
 		</>

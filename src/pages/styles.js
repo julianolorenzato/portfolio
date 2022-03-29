@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../styles/breakpoints'
 
 export const SpeechBubble1 = styled.div`
 	position: absolute;
@@ -6,7 +7,7 @@ export const SpeechBubble1 = styled.div`
 	top: 90px;
 	background-color: ${(props) => props.theme.colors.primary};
 	border-radius: 5px;
-	box-shadow: 0 0 20px ${props => props.theme.colors.shadow};
+	box-shadow: 0 0 20px ${(props) => props.theme.colors.shadow};
 	height: 240px;
 	margin: 20px;
 	width: 400px;
@@ -25,7 +26,7 @@ export const SpeechBubble1 = styled.div`
 		text-align: left;
 		display: block;
 		font-size: 2rem;
-		background: -webkit-${props => props.theme.colors.gradient};
+		background: -webkit-${(props) => props.theme.colors.gradient};
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -34,7 +35,7 @@ export const SpeechBubble1 = styled.div`
 
 	&::after {
 		background-color: ${(props) => props.theme.colors.primary};
-		box-shadow: 2px -2px 2px 0 ${props => props.theme.colors.shadow};
+		box-shadow: 2px -2px 2px 0 ${(props) => props.theme.colors.shadow};
 		content: '';
 		display: block;
 		height: 20px;
@@ -48,6 +49,17 @@ export const SpeechBubble1 = styled.div`
 		-webkit-transform: rotate(45deg);
 		width: 20px;
 	}
+
+	@media (max-width: ${breakpoints.xl}) {
+		position: relative;
+		top: 0;
+		left: 100px;
+
+		align-self: flex-start;
+		&::after {
+			display: none;
+		}
+	}
 `
 
 export const SpeechBubble2 = styled.div`
@@ -55,13 +67,13 @@ export const SpeechBubble2 = styled.div`
 	right: 10vw;
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0px 0px 15px ${props => props.theme.colors.shadow}90;
+	box-shadow: 0px 0px 15px ${(props) => props.theme.colors.shadow}90;
 	height: 160px;
 	margin: 20px;
 	width: 310px;
 	padding: 10px;
 	z-index: 3;
-	color: ${props => props.theme.colors.primary};
+	color: ${(props) => props.theme.colors.primary};
 
 	ul {
 		height: 100%;
@@ -86,7 +98,7 @@ export const SpeechBubble2 = styled.div`
 
 	&::after {
 		background-color: #fff;
-		box-shadow: -3px 2px 5px 0 ${props => props.theme.colors.shadow}50;
+		box-shadow: -3px 2px 5px 0 ${(props) => props.theme.colors.shadow}50;
 		content: '';
 		display: block;
 		height: 20px;
@@ -100,10 +112,27 @@ export const SpeechBubble2 = styled.div`
 		-webkit-transform: rotate(45deg);
 		width: 20px;
 	}
+
+	@media (max-width: ${breakpoints.xl}) {
+		position: relative;
+		top: -280px;
+		right: 100px;
+
+		align-self: flex-end;
+		&::after {
+			display: none;
+		}
+	}
+`
+
+export const HomeImage = styled.img`
+	@media (max-width: ${breakpoints.xl}) {
+		display: none;
+	}
 `
 
 export const Featured = styled.div`
-	background-color: ${props => props.theme.colors.primary};
+	background-color: ${(props) => props.theme.colors.primary};
 	height: fit-content;
 	width: 100%;
 	display: flex;
@@ -120,16 +149,21 @@ export const Featured = styled.div`
 		background: ${(props) => props.theme.colors.gradient};
 		padding: 20px;
 		border-radius: 150px;
-		border: 20px solid ${props => props.theme.colors.primary};
+		border: 20px solid ${(props) => props.theme.colors.primary};
 	}
 
 	> div {
+		width: 80%;
+		height: 90%;
 		position: relative;
 		top: -60px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		width: 80%;
-		height: 90%;
+	}
+
+	@media (max-width: ${breakpoints.xl}) {
+		position: relative;
+		top: -100px;
 	}
 `

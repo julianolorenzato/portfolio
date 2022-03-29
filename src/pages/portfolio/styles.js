@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const List = styled.div`
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+	justify-content: center;
 `
